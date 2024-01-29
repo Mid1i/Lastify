@@ -1,0 +1,255 @@
+.content__logs {
+    background: var(--background-secondary);
+    border-radius: 15px;
+    height: 100%;
+    margin: 40px 70px 40px 40px;
+    padding: 30px;
+}
+
+.logs-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__search {
+        position: relative;
+
+        &-input {
+            background: var(--background-primary);
+            border: 1px solid var(--outline-primary);
+            border-radius: 10px;
+            color: var(--text-bold);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 15px 20px;
+            padding-right: 50px;
+            width: 280px;
+
+            &::placeholder {
+                color: var(--text-secondary);
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+
+            & path {
+                stroke: var(--text-primary);
+            }
+        }
+    }
+
+    &__accounts {
+        background: var(--button-primary);
+        border: 1px solid var(--outline-primary);
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 15px 20px;
+        position: relative;
+
+        &-text {
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        &-icon path {
+            fill: var(--text-primary);
+        }
+    }
+}
+
+.logs-accounts {
+    background: var(--button-primary);
+    box-shadow: 0px 5px 44px 0px var(--box-shadow-primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    position: absolute;
+    padding: 20px;
+    opacity: 0;
+    right: 0px;
+    top: 120%;
+
+    &.active {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    &__search {
+        background: var(--button-primary);
+        border: 1px solid var(--outline-primary);
+        border-radius: 10px;
+        color: var(--text-bold);
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        padding: 12px 15px;
+        padding-right: 40px;
+        transition: all 0.2s linear;
+
+        &::placeholder {
+            color: var(--text-primary);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 35px;
+        top: 32px;
+
+        & path {
+            stroke: var(--text-primary);
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        overflow: overlay;
+        max-height: 95px;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+
+            &-track {
+                background: var(--outline-primary);
+            }
+
+            &-thumb {
+                background: var(--text-bold);
+                border-radius: 15px;
+                width: 3px;
+            }
+        }
+
+        &-el {
+            align-items: center;
+            display: flex;
+            margin-bottom: 15px;
+
+            & label {
+                align-items: center;
+                display: flex;
+
+                & svg path {
+                    fill: var(--text-primary);
+                }
+
+                & span {
+                    color: var(--text-primary);
+                    font-weight: 500;
+                    margin-left: 5px;
+                    text-overflow: ellipsis;
+                    text-wrap: nowrap;
+                }
+            }
+
+            & input {
+                appearance: none;
+                cursor: pointer;
+                margin-right: 5px;
+                height: 20px;
+                width: 20px;
+                -webkit-appearance: none;
+
+                &::after {
+                    content: url("../../assets/images/icons/account-list-icon.svg");
+                }
+
+                &:checked::after {
+                    content: url("../../assets/images/icons/account-list-icon--checked.svg");
+                }
+
+                &.light::after {
+                    content: url("../../assets/images/icons/account-list-icon--light.svg");
+                }
+
+                &.light:checked::after {
+                    content: url("../../assets/images/icons/account-list-icon--checked--light.svg");
+                }
+
+                &:checked + label span {
+                    color: var(--text-bold);
+                }
+
+                &:checked + label svg path {
+                    fill: var(--text-bold);
+                }
+            }
+        }
+    }
+}
+
+.logs {
+    background: var(--button-primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: overlay;
+    padding: 10px 30px;
+    max-height: 580px;
+    max-width: 1000px;
+
+    &::-webkit-scrollbar {
+        width: 25px;
+
+        &-track {
+            background: var(--outline-primary);
+            background-clip: content-box;
+            border: 12px solid transparent;
+            border-radius: 15px;
+        }
+
+        &-thumb {
+            background: var(--text-bold);
+            background-clip: content-box;
+            border: 11px solid transparent;
+            border-radius: 15px;
+        }
+    }
+}
+
+
+@media(hover: hover) {
+    .logs-top__search-input:hover,
+    .logs-top__search-input:focus {
+        background: var(--background-secondary);
+        color: var(--text-bold);
+
+        & + .logs-top__search-icon path {
+            stroke: var(--text-bold);
+        }
+    }
+
+    .logs-top__accounts:hover,
+    .logs-top__accounts.active {
+        border: 1px solid var(--outline-secondary);
+
+        & .logs-top__accounts-text {
+            color: var(--text-bold);
+        }
+
+        & .logs-top__accounts-icon path {
+            fill: var(--text-bold);
+        }
+    }
+
+    .logs-accounts__search:hover,
+    .logs-accounts__search:focus {
+        border: 1px solid var(--outline-secondary);
+        color: var(--text-bold);
+
+        & + .logs-accounts__icon path {
+            stroke: var(--text-bold);
+        }
+    }
+}

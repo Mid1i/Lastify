@@ -10,11 +10,40 @@
         flex: 0 0 410px;
     }
 
-    &-image {
+    &-wrapper {
         border-radius: 10px;
         margin-right: 10px;
         height: 45px;
         width: 45px;
+
+        &--knives {
+            background: linear-gradient(180deg, rgba(221, 35, 35, 0.30) 0%, rgba(221, 35, 35, 0.00) 100%);
+        }
+
+        &--rifles {
+            background: linear-gradient(180deg, rgba(95, 35, 221, 0.30) 0%, rgba(95, 35, 221, 0.00) 100%);
+        }
+
+        &--SMGs {
+            background: linear-gradient(180deg, rgba(35, 143, 221, 0.30) 0%, rgba(35, 143, 221, 0.00) 100%);
+        }
+
+        &--heavy {
+            background: linear-gradient(180deg, rgba(195, 35, 221, 0.30) 0%, rgba(195, 35, 221, 0.00) 100%);
+        }
+
+        &--gloves {
+            background: linear-gradient(180deg, rgba(196, 202, 23, 0.3) 0%, rgba(195, 35, 221, 0.00) 100%);
+        }
+
+        &--pistols {
+            background: linear-gradient(180deg, rgba(26, 202, 67, 0.3) 0%, rgba(195, 35, 221, 0.00) 100%);
+        }
+    }
+
+    &-image {
+        height: 100%;
+        width: 100%;
     }
 
     &--good {
@@ -34,6 +63,10 @@
 
     &-icon {
         margin-right: 8px;
+
+        &--account path {
+            fill: var(--text-bold);
+        }
     }
 
     &-text {

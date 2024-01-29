@@ -65,11 +65,16 @@
     }
 
     &__settings {
+        border-radius: 10px;
         align-items: center;
         display: flex;
         padding: 15px;
         margin-bottom: 5px;
         transition: all 0.2s linear;
+
+        &.active {
+            background: var(--button-primary);
+        }
 
         &.small {
             padding-left: 25px;

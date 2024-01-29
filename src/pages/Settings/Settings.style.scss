@@ -1,0 +1,87 @@
+.content__settings {
+    align-items: flex-start;
+    background: var(--background-secondary);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 70px 0px 60px;
+    padding: 70px 75px 150px 70px;
+}
+
+.settings {
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+
+        &-label {
+            color: var(--text-bold);
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        &-input {
+            background: var(--button-primary);
+            border: 1px solid var(--outline-primary);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 15px 20px;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            max-width: 280px;
+            width: 100%;
+        }
+
+        &-readd {
+            background: var(--button-primary);
+            border-radius: 13px;
+            align-items: center;
+            display: flex;
+            padding: 3px;
+
+            & span {
+                border-radius: 10px;
+                color: var(--text-primary);
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 15px 20px;
+
+                &.active {
+                    background: var(--background-secondary);
+                    color: var(--text-bold);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &__button {
+        align-self: flex-end;
+        border-radius: 10px;
+        background: #8075FF;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 15px 20px;
+        position: absolute;
+        right: 40px;
+        top: 120px;
+    }
+}
+
+
+@media(hover: hover) {
+    .settings__item-input:hover {
+        border: 1px solid var(--outline-secondary);
+        color: var(--text-bold);
+    }
+}

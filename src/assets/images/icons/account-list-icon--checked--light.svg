@@ -1,0 +1,8 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/linear/tick-square">
+<g id="tick-square">
+<path id="Vector" d="M1.6662 16.3334C1.66622 17.4379 2.56164 18.3333 3.6662 18.3333H16.3331C17.4376 18.3333 18.3331 17.4379 18.3331 16.3333V3.6667C18.3331 2.56214 17.4376 1.66671 16.3331 1.6667L3.66604 1.66669C2.56146 1.66669 1.66603 2.56213 1.66604 3.66671L1.6662 16.3334Z" fill="#101119"/>
+<path id="Vector_2" d="M6.45801 10L8.81634 12.3583L13.5413 7.64166" stroke="#F5F5F5" stroke-width="1.5" stroke-linecap="square"/>
+</g>
+</g>
+</svg>

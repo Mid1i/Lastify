@@ -3,7 +3,7 @@ import classNames from "classnames";
 import "./SalesItem.style.scss";
 
 
-export default function SalesItem({image, name, skin, st = false, type, float, days, bought, sold, profit, marketplace, account, time, date, status}) {
+export default function SalesItem({image, name, skin, st = false, itemType, type, float, days, bought, sold, profit, marketplace, account, time, date, status}) {
     const getStatus = () => {
         if (status === 'Accepted') {
             return (
@@ -34,12 +34,14 @@ export default function SalesItem({image, name, skin, st = false, type, float, d
             );
         }
     }
-    
+
     
     return (
         <tr>
             <td className="sales__item sales__item--item">
-                <img alt={name} className="sales__item-image" src={image}/>
+                <div className={classNames("sales__item-wrapper", `sales__item-wrapper--${itemType}`)}>
+                    <img alt={name} className="sales__item-image" src={image}/>
+                </div>
                 <div className="sales__item-info sales-info">
                     <p className="sales-info__top">
                         <span className="sales-info__top-name">{name}</span>
@@ -75,7 +77,7 @@ export default function SalesItem({image, name, skin, st = false, type, float, d
                 <span className="sales__item-text">{marketplace}</span>
             </td>
             <td className="sales__item">
-                <svg className="sales__item-icon" fill="none" height="17" viewBox="0 0 17 17" width="17">
+                <svg className="sales__item-icon sales__item-icon--account" fill="none" height="17" viewBox="0 0 17 17" width="17">
                     <path d="M8.98152 7.74616C8.91486 7.73949 8.83486 7.73949 8.76152 7.74616C7.17486 7.69283 5.91486 6.39283 5.91486 4.79282C5.91486 3.15949 7.23486 1.83282 8.87486 1.83282C10.5082 1.83282 11.8349 3.15949 11.8349 4.79282C11.8282 6.39283 10.5682 7.69283 8.98152 7.74616Z" fill="#F8F0FB"/>
                     <path d="M5.64829 10.2072C4.03496 11.2872 4.03496 13.0472 5.64829 14.1205C7.48163 15.3472 10.4883 15.3472 12.3216 14.1205C13.935 13.0405 13.935 11.2805 12.3216 10.2072C10.495 8.98718 7.48829 8.98718 5.64829 10.2072Z" fill="#F8F0FB"/>
                 </svg>
