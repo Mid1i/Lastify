@@ -1,0 +1,274 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__filter {
+        background: var(--background-secondary);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        margin: 40px 70px 20px 40px;
+        padding: 30px;
+
+        &-title {
+            color: var(--text-bold);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__sales {
+        background: var(--background-secondary);
+        border-radius: 15px;
+        margin: 0px 70px 30px 30px;
+        padding: 30px 45px 0px 30px;
+    }
+}
+
+.filter-row {
+    align-items: center;
+    display: flex;
+
+    &__search {
+        position: relative;
+        margin-right: 20px;
+        width: 310px;
+
+        &-input {
+            background: var(--background-primary);
+            border: 1px solid var(--outline-primary);
+            border-radius: 10px;
+            color: var(--text-bold);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 15px 55px 15px 20px;
+            width: 100%;
+
+
+            &::placeholder {
+                color: var(--text-secondary);
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+    }
+
+    &__item {
+        background: var(--button-primary);
+        border: 1px solid var(--outline-primary);
+        border-radius: 10px;
+        color: var(--text-primary);
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 20px;
+        padding: 15px 20px;
+        position: relative;
+        transition: all 0.2s linear;
+        width: 310px;
+
+        &.active {
+            border-radius: 10px 10px 3px 3px;
+        }
+    }
+}
+
+.filter-list {
+    background: var(--button-primary);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 5px 44px 0px var(--box-shadow-primary);
+    display: flex;
+    flex-direction: column;
+    overflow-y: overlay;
+    pointer-events: none;
+    position: absolute;
+    padding: 5px 20px;
+    opacity: 0;
+    left: 0px;
+    top: 110%;
+    transition: all 0.2s linear;
+    max-height: 330px;
+    width: 100%;
+
+    &.active {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    &::-webkit-scrollbar {
+        width: 25px;
+
+        &-track {
+            background: var(--outline-primary);
+            background-clip: content-box;
+            border: 12px solid transparent;
+            border-radius: 15px;
+        }
+
+        &-thumb {
+            background: var(--text-bold);
+            background-clip: content-box;
+            border: 11px solid transparent;
+            border-radius: 15px;
+        }
+    }
+
+    &__el {
+        border-bottom: 1px solid var(--outline-primary);
+        align-items: center;
+        display: flex;
+        padding: 15px 0px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &.active {
+            background: var(--background-secondary);
+        }
+
+        &-text {
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        &-icon {
+            fill: var(--text-primary);
+            margin-right: 15px;
+            height: 30px;
+            width: 40px;
+        }
+    }
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+
+    & tbody {
+        overflow: overlay;
+        max-height: 540px;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+            width: 25px;
+
+            &-track {
+                background: var(--outline-primary);
+                background-clip: content-box;
+                border: 12px solid transparent;
+                border-radius: 15px;
+            }
+
+            &-thumb {
+                background: var(--text-bold);
+                background-clip: content-box;
+                border: 11px solid transparent;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    & thead tr,
+    & tbody tr {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    & thead tr {
+        padding: 0px 10px;
+    }
+
+    & tbody tr {
+        background: var(--button-primary);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        transition: all 0.2s linear;
+    }
+
+    &__header {
+        align-items: center;
+        display: flex;
+        flex: 0 1 9%;
+        color: var(--text-primary);
+        cursor: pointer;
+        font-weight: 500;
+        margin-right: 15px;
+
+        &--item {
+            cursor: auto;
+            flex: 0 0 410px;
+        }
+
+        &--days {
+            cursor: auto;
+        }
+
+        &-text {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        &-icon {
+            cursor: pointer;
+
+            & path:last-child {
+                fill: var(--text-primary);
+            }
+        }
+
+        &--status {
+            justify-content: flex-end;
+        }
+    }
+}
+
+
+@media(hover: hover) {
+    .filter-row__search:hover .filter-row__search-input,
+    .filter-row__search-input:focus {
+        background: var(--background-secondary);
+    }
+
+    .filter-row__search:hover .filter-row__search-icon path,
+    .filter-row__search-input:focus + .filter-row__search-icon path {
+        stroke: var(--text-bold);
+    }
+
+    .filter-row__item:hover,
+    .filter-row__item.active {
+        border: 1px solid var(--outline-secondary);
+
+        & .filter-row__item-title {
+            color: var(--text-bold);
+        }
+
+        & .filter-row__item-icon path {
+            fill: var(--text-bold);
+        }
+    }
+
+    .filter-list__el:hover .filter-list__el-text {
+        color: var(--text-bold);
+    }
+
+    .filter-list__el:hover .filter-list__el-icon path {
+        fill: var(--text-bold);
+    }
+}

@@ -1,0 +1,180 @@
+.header {
+    background: var(--background-secondary);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 70px 15px 60px;
+    width: 100%;
+
+    &__title {
+        color: var(--text-bold);
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 120%;
+    }
+
+    &__btns {
+        display: flex;
+    }
+}
+
+.theme {
+    background: var(--button-primary);
+    border-radius: 13px;
+    display: flex;
+    padding: 3px;
+    margin-right: 30px;
+
+    &__el {
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        padding: 15px 20px;
+
+        &:first-child {
+            margin-right: 5px;
+        }
+
+        &.light,
+        &.dark {
+            background: var(--background-secondary);
+
+            .theme__el-text {
+                color: var(--text-bold);
+                font-weight: 700;
+            }
+        }
+
+        &.light &-icon path {
+            fill: #DE9C1C;
+        }
+
+        &.dark &-icon path {
+            fill: var(--text-bold);
+        }
+
+        &-text {
+            color: var(--text-primary);
+            font-size: 16px;
+            margin-right: 8px;
+        }
+    }
+}
+
+.lang {
+    background: var(--button-primary);
+    border-radius: 13px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    position: relative;
+
+    &.active {
+        background: var(--background-primary);
+    }
+
+    &__circle {
+        margin: 0px 8px;
+
+        & circle {
+            fill: var(--text-bold);
+        }
+    }
+
+    &__icon path {
+        fill: var(--text-bold);
+    }
+
+    &__text {
+        color: var(--text-bold);
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 8px;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        background: var(--button-primary);
+        box-shadow: 0px 5px 44px 0px var(--box-shadow-primary);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        pointer-events: none;
+        position: absolute;
+        padding: 20px;
+        opacity: 0;
+        right: 0px;
+        top: 120%;
+        transition: all 0.1s linear;
+        z-index: 1;
+
+        &.active {
+            pointer-events: auto;
+            opacity: 1;
+        }
+    }
+
+    &-el {
+        align-items: center;
+        display: flex;
+
+        &:first-child {
+            margin-bottom: 15px;
+        }
+
+        &__input {
+            appearance: none;
+            cursor: pointer;
+            margin-right: 8px;
+            height: 20px;
+            width: 20px;
+            -webkit-appearance: none;
+
+            &::after {
+                content: url("../../assets/images/icons/list-icon.svg");
+            }
+
+            &:checked::after {
+                content: url("../../assets/images/icons/list-icon--checked.svg");
+            }
+
+            &.light::after {
+                content: url("../../assets/images/icons/list-icon--light.svg");
+            }
+
+            &.light:checked::after {
+                content: url("../../assets/images/icons/list-icon--light--checked.svg");
+            }
+        }
+
+        &__label {
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+
+            &-circle {
+                margin: 0px 8px;
+
+                & circle {
+                    fill: var(--text-bold);
+                }
+            }
+        
+            &-text {
+                color: var(--text-bold);
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+@media(hover: hover) {
+    .lang:hover {
+        background: var(--background-primary);
+    }
+}

@@ -1,0 +1,153 @@
+.sales__item {
+    align-items: center;
+    display: flex;
+    flex: 0 1 9%;
+    color: var(--text-bold);
+    font-weight: 500;
+    margin-right: 15px;
+
+    &--item {
+        flex: 0 0 410px;
+    }
+
+    &-image {
+        border-radius: 10px;
+        margin-right: 10px;
+        height: 45px;
+        width: 45px;
+    }
+
+    &--good {
+        color: #14CC92;
+        font-weight: 700;
+    }
+
+    &--bad {
+        color: #E03616;
+        font-weight: 700;
+    }
+
+    &--average {
+        color: #FFC759;
+        font-weight: 700;
+    }
+
+    &-icon {
+        margin-right: 8px;
+    }
+
+    &-text {
+        color: var(--text-primary);
+        font-weight: 500;
+    }
+
+    &-bold {
+        color: var(--text-bold);
+        font-weight: 500;
+        margin-right: 6px;
+    }
+
+    &--status {
+        justify-content: flex-end;
+    }
+
+    &-status {
+        align-items: center;
+        display: flex;
+        border-radius: 5px;
+        padding: 8px;
+
+        &--accepted {
+            background: rgba(20, 204, 146, 0.15);
+
+            & span {
+                color: #14CC92;
+            }
+        }
+
+        &--pending {
+            background: rgba(255, 199, 89, 0.15);
+
+            & span {
+                color: #FFC759;
+            }
+        }
+
+        &--failed {
+            background: rgba(224, 54, 22, 0.15);
+
+            & span {
+                color: #E03616;
+            }
+        }
+
+        & svg {
+            margin-right: 8px;
+        }
+
+        & span {
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+}
+
+.sales-info {
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+
+        &-name {
+            color: var(--text-bold);
+            font-weight: 700;
+            margin-right: 6px;
+            text-transform: uppercase;
+        }
+
+        &-skin {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin: 0px 6px;
+        }
+
+        &-st {
+            color: #FFC759;
+            margin-left: 6px;
+            margin-right: 3px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__bottom {
+        align-items: center;
+        display: flex;
+
+        &-type {
+            color: #8075FF;
+            font-weight: 700;
+            margin-right: 6px;
+            text-shadow: 0px 1px 24px #8075FF;
+            text-transform: uppercase;
+        }
+
+        &-float {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-left: 6px;
+        }
+    }
+}
+
+@media(hover: hover) {
+    .sales tbody tr:hover {
+        border: 1px solid var(--outline-secondary);
+
+        & .sales-info__top-skin {
+            color: var(--text-bold);
+        }
+    }
+}

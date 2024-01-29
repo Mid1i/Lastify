@@ -1,0 +1,71 @@
+.requests-table__item {
+    color: var(--text-primary);
+    align-items: center;
+    display: flex;
+    flex: 0 1 16.3%;
+    font-weight: 500;
+    margin-right: 30px;
+
+    &--name {
+        flex: 0 0 410px;
+    }
+
+    &-bold {
+        color: var(--text-bold);
+        font-weight: 700;
+    }
+
+    &-percents {
+        background: rgba(20, 204, 146, 0.15);
+        border-radius: 5px;
+        color: #14CC92;
+        padding: 8px;
+        padding-right: 12px;
+        margin-left: 10px;
+    }
+
+    &--time {
+        font-weight: 700;
+
+        &--good {
+            color: #14CC92;
+        }
+
+        &--average {
+            color: #FFC759;
+        }
+
+        &--bad {
+            color: #E03616;
+        }
+    }
+
+    &--errors {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-row {
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        & span:first-child {
+            color: var(--text-bold);
+            margin-right: 10px;
+        }
+
+        & span:last-child {
+            color: #E03616;
+        }
+    }
+
+    &--proxys {
+        margin-right: 0px;
+    }
+}
