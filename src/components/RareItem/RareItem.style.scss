@@ -1,0 +1,250 @@
+.rare__item {
+    align-items: center;
+    display: flex;
+    flex: 0 1 9%;
+    color: var(--text-bold);
+    font-weight: 500;
+    margin-right: 15px;
+    position: relative;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    &--item {
+        flex: 0 0 235px;
+    }
+
+    &-wrapper {
+        border-radius: 10px;
+        margin-right: 10px;
+        height: 45px;
+        width: 45px;
+
+        &--knives {
+            background: linear-gradient(180deg, rgba(221, 35, 35, 0.30) 0%, rgba(221, 35, 35, 0.00) 100%);
+        }
+
+        &--rifles {
+            background: linear-gradient(180deg, rgba(95, 35, 221, 0.30) 0%, rgba(95, 35, 221, 0.00) 100%);
+        }
+
+        &--SMGs {
+            background: linear-gradient(180deg, rgba(35, 143, 221, 0.30) 0%, rgba(35, 143, 221, 0.00) 100%);
+        }
+
+        &--heavy {
+            background: linear-gradient(180deg, rgba(195, 35, 221, 0.30) 0%, rgba(195, 35, 221, 0.00) 100%);
+        }
+
+        &--gloves {
+            background: linear-gradient(180deg, rgba(196, 202, 23, 0.3) 0%, rgba(195, 35, 221, 0.00) 100%);
+        }
+
+        &--pistols {
+            background: linear-gradient(180deg, rgba(26, 202, 67, 0.3) 0%, rgba(195, 35, 221, 0.00) 100%);
+        }
+    }
+
+    &-image {
+        height: 100%;
+        width: 100%;
+    }
+
+    &--number {
+        flex: 0 0 50px;
+    }
+
+    &-bold {
+        color: var(--text-bold);
+        font-weight: 700;
+        margin-right: 6px;
+    }
+
+    &--limit {
+        flex: 0 0 300px;
+    }
+
+    &-text {
+        color: var(--text-primary);
+        font-weight: 500;
+        margin-right: 8px;
+
+        &--flex {
+            flex: 1 0 auto;
+        }
+    }
+
+    &-limit {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: 1px solid var(--outline-primary);
+        background: var(--background-secondary);
+        padding: 15px;
+        width: 140px;
+    }
+
+    &-dash {
+        margin: 0px 5px;
+
+        & path {
+            stroke: var(--outline-secondary);
+        }
+    }
+
+    &--bought {
+        flex: 0 0 190px;
+    }
+
+    &--price {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &-icon {
+        margin-right: 8px;
+
+        & path {
+            fill: var(--text-primary);
+        }
+    }
+
+    &-row {
+        align-items: center;
+        display: flex;
+    }
+
+    &-more {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background: #FFC759;
+        border-radius: 100px;
+        color: var(--background-primary);
+        font-size: 10px;
+        font-weight: 700;
+        position: absolute;
+        right: 0px;
+        top: 40px;
+        height: 20px;
+        width: 20px;
+    }
+
+    &--icon {
+        flex: 0 0 30px;
+        height: 30px;
+        width: 30px;
+
+        & rect {
+            fill: var(--background-secondary);
+        }
+
+        & path {
+            fill: var(--text-primary);
+
+            &:first-child {
+                fill: none;
+                stroke: var(--text-primary);
+            }
+        }
+    }
+}
+
+.rare-info {
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+
+        &-name {
+            color: var(--text-bold);
+            font-weight: 700;
+            margin-right: 6px;
+            text-transform: uppercase;
+        }
+
+        &-skin {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin: 0px 6px;
+        }
+    }
+
+    &__bottom {
+        align-items: center;
+        display: flex;
+
+        &-type {
+            color: #8075FF;
+            font-weight: 700;
+            margin-right: 6px;
+            text-shadow: 0px 1px 24px #8075FF;
+            text-transform: uppercase;
+        }
+
+        &-float {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-left: 6px;
+        }
+    }
+}
+
+.rare-list {
+    border-radius: 5px;
+    background: var(--button-primary);
+    box-shadow: 0px 5px 44px 0px var(--box-shadow-primary);
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    padding: 20px;
+    left: 30px;
+    top: 65px;
+    transition: all 0.2s linear;
+    width: 155px;
+    z-index: 1;
+
+    &__el {
+        align-items: center;
+        display: flex;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &-icon path {
+            fill: var(--text-primary);
+        }
+
+        &-bold {
+            color: var(--text-bold);
+            font-weight: 700;
+            margin-left: 8px;
+        }
+    }
+}
+
+
+@media(hover: hover) {
+    .rare__item-more:hover + .rare-list {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    .rare__item--icon:hover path {
+        fill: var(--text-bold);
+
+        &:first-child {
+            fill: none;
+            stroke: var(--text-bold);
+        }
+    }
+}
