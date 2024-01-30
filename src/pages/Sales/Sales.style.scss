@@ -271,4 +271,12 @@
     .filter-list__el:hover .filter-list__el-icon path {
         fill: var(--text-bold);
     }
+
+    .sales__header:hover .sales__header-text {
+        color: var(--text-bold);
+    }
+
+    .sales__header:hover .sales__header-icon path:last-child {
+        fill: var(--text-bold);
+    }
 }

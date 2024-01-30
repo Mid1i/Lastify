@@ -133,6 +133,10 @@
             &:checked::after {
                 content: url("../../assets/images/icons/checkbox--checked.svg");
             }
+
+            &.light:checked::after {
+                content: url("../../assets/images/icons/account-list-icon--checked--light.svg");
+            }
         }
 
         &-label {

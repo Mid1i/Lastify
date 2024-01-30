@@ -1,0 +1,122 @@
+.content__accounts {
+    background: var(--background-secondary);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 70px 40px 40px;
+    padding: 30px;
+    height: 100%;
+
+    &-search {
+        position: relative;
+        margin-bottom: 30px;
+        width: 280px;
+
+        & input {
+            background: var(--background-primary);
+            border: 1px solid var(--outline-primary);
+            border-radius: 10px;
+            color: var(--text-bold);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 15px 20px;
+            padding-right: 50px;
+            width: 100%;
+
+            &::placeholder {
+                color: var(--text-secondary);
+            }
+        }
+
+        & svg {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+
+            & path {
+                stroke: var(--text-primary);
+            }
+        }
+    }
+}
+
+.accounts {
+    display: flex;
+    flex-direction: column;
+
+    & tbody {
+        max-height: 590px;
+        overflow-y: overlay;
+
+        &::-webkit-scrollbar {
+            width: 25px;
+
+            &-track {
+                background: var(--outline-primary);
+                background-clip: content-box;
+                border: 12px solid transparent;
+                border-radius: 15px;
+            }
+
+            &-thumb {
+                background: var(--text-bold);
+                background-clip: content-box;
+                border: 11px solid transparent;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    & thead tr,
+    & tbody tr {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px 40px;
+    }
+
+    & tbody tr {
+        background: var(--button-primary);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__header {
+        align-items: center;
+        display: flex;
+        color: var(--text-primary);
+        flex: 0 1 14.5%;
+        font-weight: 500;
+        margin-right: 15px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &--number {
+            flex: 0 0 50px;
+        }
+
+        &-text {
+            color: var(--text-primary);
+            margin-right: 8px;
+        }
+
+        &-icon path {
+            stroke: var(--text-bold);
+        }
+    }
+}
+
+
+@media(hover: hover) {
+    .content__accounts-search input:hover,
+    .content__accounts-search input:focus {
+        background: var(--button-primary);
+
+        & + svg path {
+            stroke: var(--text-bold);
+        }
+    }
+}

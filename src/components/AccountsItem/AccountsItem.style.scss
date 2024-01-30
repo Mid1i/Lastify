@@ -1,0 +1,156 @@
+.accounts__item {
+    align-items: center;
+    display: flex;
+    color: var(--text-bold);
+    flex: 0 1 13%;
+    font-weight: 500;
+    margin-right: 15px;
+    position: relative;
+
+    &--number {
+        flex: 0 0 50px;
+    }
+
+    &-image {
+        border-radius: 15px;
+        margin-right: 10px;
+        height: 45px;
+        width: 45px;
+    }
+
+    &-name {
+        color: var(--text-bold);
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    &-icon {
+        cursor: pointer;
+        
+        & path {
+            stroke: var(--text-primary);
+        }
+    }
+
+    &--host,
+    &--guard {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &-row {
+        align-items: center;
+        display: flex;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &-bold {
+        font-weight: 700;
+    }
+
+    &-country {
+        color: var(--text-primary);
+        font-weight: 500;
+        margin-right: 6px;
+        margin-left: 3px;
+    }
+
+    &-text {
+        font-weight: 500;
+        margin-left: 8px;
+    }
+
+    &-progress path:first-child {
+        stroke: var(--guard-progress);
+    }
+
+    &-time {
+        color: var(--text-primary);
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+    &-status {
+        border-radius: 5px;
+        padding: 8px;
+
+        &--Active {
+            background: rgba(20, 204, 146, 0.15);
+            color: #14CC92;
+        }
+
+        &--Inactive {
+            background: rgba(255, 199, 89, 0.15);
+            color: #FFC759;
+        }
+
+        &--Banned {
+            background: rgba(224, 54, 22, 0.15);
+            color: #E03616;
+        }
+    }
+}
+
+.accounts-list {
+    background: var(--button-primary);
+    box-shadow: 0px 5px 44px 0px var(--box-shadow-primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    position: absolute;
+    padding: 20px;
+    opacity: 0;
+    left: 0px;
+    top: 160%;
+    transition: all 0.2s linear;
+    width: 170px;
+    z-index: 1;
+
+    &__el {
+        align-items: center;
+        display: flex;
+        margin-bottom: 15px;
+        width: 100%;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &-market {
+            flex: 0 0 auto;
+            margin-right: 8px;
+
+            & path {
+                fill: var(--text-primary);
+            }
+        }
+
+        &-ping {
+            color: var(--text-bold);
+            display: block;
+            flex: 1 0 auto;
+            font-weight: 500;
+        }
+
+        &-icon {
+            flex: 0 0 auto;
+        }
+    }
+}
+
+
+@media(hover: hover) {
+    .accounts__item-icon:hover path {
+        stroke: var(--text-bold);
+    }
+
+    .accounts__item-ping:hover + .accounts-list {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}

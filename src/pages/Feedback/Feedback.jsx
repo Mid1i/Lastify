@@ -1,4 +1,8 @@
+import classNames from "classnames";
+import {useContext} from "react";
+
 import {AsideMenu, Header} from "../../components";
+import {appContext} from "../../services";
 
 import "./Feedback.style.scss";
 
@@ -7,6 +11,9 @@ import background from "../../assets/images/backgrounds/feedback.png";
 
 
 export default function Feedback() {
+    const {theme} = useContext(appContext);
+    
+    
     return (
         <>
             <AsideMenu activePage='feedback'/>
@@ -31,7 +38,7 @@ export default function Feedback() {
                     <form className="content__feedback-form feedback-form">
                         <input className="feedback-form__input" placeholder="The text of the review" name="feedback" type="text"/>
                         <div className="feedback-form__checkbox">
-                            <input className="feedback-form__checkbox-input" id="checkbox" name="checkbox" required type="checkbox"/>
+                            <input className={classNames("feedback-form__checkbox-input", theme === 'light' && 'light')} id="checkbox" name="checkbox" required type="checkbox"/>
                             <label className="feedback-form__checkbox-label" htmlFor="checkbox">I agree with the personal data processing policy</label>
                         </div>
                         <button className="feedback-form__button">Leave a review</button>
