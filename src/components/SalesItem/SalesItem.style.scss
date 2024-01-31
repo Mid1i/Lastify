@@ -128,6 +128,7 @@
 .sales-info {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     &__top {
         align-items: center;
@@ -153,6 +154,15 @@
             margin-right: 3px;
             text-transform: uppercase;
         }
+
+        &-icon:last-child {
+            cursor: pointer;
+            margin-left: 8px;
+
+            & path {
+                stroke: var(--text-primary);
+            }
+        }
     }
 
     &__bottom {
@@ -175,6 +185,27 @@
     }
 }
 
+.copy {
+    background: #41404A;
+    border-radius: 10px;
+    color: #FFFFFF;
+    position: absolute;
+    pointer-events: none;
+    padding: 10px 15px;
+    opacity: 0;
+    left: 230px;
+    top: 0px;
+    width: 185px;
+    transition: all 0.2s linear;
+    z-index: 1;
+
+    &.active {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+
 @media(hover: hover) {
     .sales tbody tr:hover {
         border: 1px solid var(--outline-secondary);
@@ -182,5 +213,9 @@
         & .sales-info__top-skin {
             color: var(--text-bold);
         }
+    }
+
+    .sales-info__top-icon:last-child:hover path {
+        stroke: var(--text-bold);
     }
 }

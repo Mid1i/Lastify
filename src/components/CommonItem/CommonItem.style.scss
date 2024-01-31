@@ -184,6 +184,15 @@
             font-weight: 500;
             margin: 0px 6px;
         }
+
+        &-icon:last-child {
+            cursor: pointer;
+            margin-left: 8px;
+
+            & path {
+                stroke: var(--text-primary);
+            }
+        }
     }
 
     &__bottom {

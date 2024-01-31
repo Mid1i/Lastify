@@ -9,6 +9,7 @@ import graffic from "../../assets/images/backgrounds/graffic.png";
 export default function RareItem({image, name, skin, quality, float, type, number, bought, boughtFloat, boughtDays, price, sales, minPrice, maxPrice, averagePrice, history}) {
     const [openHistory, setOpenHistory] = useReducer(prev => !prev, false);
     const [openFilter, setOpenFilter] = useReducer(prev => !prev, false);
+    const [active, setActive] = useReducer(prev => !prev, false);
     const [minLimitError, setMinLimitError] = useState(false);
     const [maxLimitError, setMaxLimitError] = useState(false);
     const [minLimit, setMinLimit] = useState('');
@@ -35,6 +36,15 @@ export default function RareItem({image, name, skin, quality, float, type, numbe
         }
     }
 
+    const onCopy = () => {
+        navigator.clipboard.writeText(`${name} ${skin}`);
+        setActive();
+
+        window.setTimeout(() => {
+            setActive();
+        }, 1000);
+    }
+
     
     return (
         <tr>
@@ -47,7 +57,12 @@ export default function RareItem({image, name, skin, quality, float, type, numbe
                         <span className="rare-info__top-name">{name}</span>
                         ·
                         <span className="rare-info__top-skin">{skin}</span>
+                        <svg className="sales-info__top-icon" fill="none" onClick={onCopy} height="17" viewBox="0 0 17 17" width="17">
+                            <path d="M4.3335 6.55584C4.3335 5.9664 4.56765 5.4011 4.98445 4.9843C5.40125 4.5675 5.96655 4.33334 6.556 4.33334H13.7777C14.0695 4.33334 14.3585 4.39083 14.6282 4.50252C14.8978 4.61421 15.1428 4.77792 15.3492 4.9843C15.5556 5.19068 15.7193 5.43568 15.831 5.70533C15.9427 5.97498 16.0002 6.26398 16.0002 6.55584V13.7775C16.0002 14.0694 15.9427 14.3584 15.831 14.628C15.7193 14.8977 15.5556 15.1427 15.3492 15.3491C15.1428 15.5554 14.8978 15.7191 14.6282 15.8308C14.3585 15.9425 14.0695 16 13.7777 16H6.556C6.26413 16 5.97513 15.9425 5.70548 15.8308C5.43584 15.7191 5.19083 15.5554 4.98445 15.3491C4.77807 15.1427 4.61437 14.8977 4.50267 14.628C4.39098 14.3584 4.3335 14.0694 4.3335 13.7775V6.55584Z" stroke="#FAFAFA" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.84333 12.4475C1.58779 12.3018 1.37523 12.0912 1.22715 11.8371C1.07906 11.5829 1.00071 11.2942 1 11V2.66667C1 1.75 1.75 1 2.66667 1H11C11.625 1 11.965 1.32083 12.25 1.83333" stroke="#FAFAFA" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </p>
+                    <span className={classNames("copy", active && "active")}>Успешно скопировано</span>
                     <p className="rare-info__bottom">
                         <span className="rare-info__bottom-type">{quality}</span>
                         ·
