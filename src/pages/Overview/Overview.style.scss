@@ -99,9 +99,11 @@
 .content__requests {
     background: var(--background-secondary);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
     margin: 0px 70px 20px 40px;
     padding: 30px 40px;
-    overflow-y: overlay;
+    height: calc(100% - 350px);
 }
 
 .requests-top {
@@ -219,11 +221,13 @@
 .requests-table {
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
+    position: relative;
     width: 100%;
 
     & tbody {
-        max-height: 485px;
-        height: 100%;
+        overflow-y: overlay;
+        max-height: 100%;
 
         &::-webkit-scrollbar {
             width: 25px;

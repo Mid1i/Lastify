@@ -7,13 +7,21 @@
     margin-right: 15px;
     position: relative;
 
-    &:last-child {
+    &:last-child,
+    &--last {
         margin-right: 0px;
     }
 
     &--item {
         cursor: pointer;
         flex: 0 0 235px;
+    }
+
+    &--icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     &-wrapper {
@@ -88,6 +96,11 @@
 
     &--bought {
         flex: 0 0 190px;
+
+        &--common {
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 
     &--price {
@@ -118,10 +131,16 @@
         font-size: 10px;
         font-weight: 700;
         position: absolute;
-        right: 0px;
+        left: 105px;
         top: 40px;
         height: 20px;
         width: 20px;
+
+        &--common {
+            background: #8075FF;
+            color: var(--text-bold);
+            left: 170px;
+        }
     }
 
     &--icon {
@@ -198,10 +217,34 @@
     opacity: 0;
     padding: 20px;
     left: 30px;
-    top: 65px;
+    top: 62px;
     transition: all 0.2s linear;
     width: 155px;
     z-index: 1;
+
+    &--common {
+        overflow-y: overlay;
+        max-height: 140px;
+        width: 240px;
+
+        &::-webkit-scrollbar {
+            width: 25px;
+
+            &-track {
+                background: var(--outline-primary);
+                background-clip: content-box;
+                border: 12px solid transparent;
+                border-radius: 15px;
+            }
+
+            &-thumb {
+                background: var(--text-bold);
+                background-clip: content-box;
+                border: 11px solid transparent;
+                border-radius: 15px;
+            }
+        }
+    }
 
     &__el {
         align-items: center;
@@ -219,6 +262,12 @@
         &-bold {
             color: var(--text-bold);
             font-weight: 700;
+            margin-left: 8px;
+        }
+
+        &-text {
+            color: var(--text-primary);
+            font-weight: 500;
             margin-left: 8px;
         }
     }
@@ -353,7 +402,7 @@
     transform: translate(-50%, -50%);
     transition: all 0.2s linear;
     height: 740px;
-    width: 650px;
+    width: 660px;
     z-index: 3;
 
     &.active {
@@ -608,10 +657,16 @@
 
 
 @media(hover: hover) {
-    .rare__item-more:hover + .rare-list {
+    .rare__item-more:hover + .rare-list,
+    .rare-list:hover {
         pointer-events: auto;
         opacity: 1;
     }
+
+    // .rare__item-more--common:hover + .rare-list {
+    //     pointer-events: none;
+    //     opacity: 0;
+    // }
 
     .rare__item--icon:hover path {
         fill: var(--text-bold);

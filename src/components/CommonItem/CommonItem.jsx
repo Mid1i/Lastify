@@ -61,9 +61,11 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                     <div className="rare__item-el rare-el">
                         <input className="rare-el__limit" value={minLimit} onChange={onChangeMinLimit} placeholder="500" type="number"/>
                         <span className="rare-el__icon">$</span>
-                        <svg className={classNames("rare-el__save", !!minLimit && "active")} fill="none" height="14" viewBox="0 0 14 14" width="14">
-                            <path d="M6.99984 1.1665C3.78567 1.1665 1.1665 3.78567 1.1665 6.99984C1.1665 10.214 3.78567 12.8332 6.99984 12.8332C10.214 12.8332 12.8332 10.214 12.8332 6.99984C12.8332 3.78567 10.214 1.1665 6.99984 1.1665ZM9.78817 5.65817L6.48067 8.96567C6.399 9.04734 6.28817 9.094 6.1715 9.094C6.05484 9.094 5.944 9.04734 5.86234 8.96567L4.2115 7.31484C4.04234 7.14567 4.04234 6.86567 4.2115 6.6965C4.38067 6.52734 4.66067 6.52734 4.82984 6.6965L6.1715 8.03817L9.16984 5.03984C9.339 4.87067 9.61901 4.87067 9.78817 5.03984C9.95734 5.209 9.95734 5.48317 9.78817 5.65817Z" fill="#F8F0FB"/>
-                        </svg>
+                        {minLimitError && (
+                            <svg className={classNames("rare-el__save", !!minLimit && "active")} fill="none" height="14" viewBox="0 0 14 14" width="14">
+                                <path d="M6.99984 1.1665C3.78567 1.1665 1.1665 3.78567 1.1665 6.99984C1.1665 10.214 3.78567 12.8332 6.99984 12.8332C10.214 12.8332 12.8332 10.214 12.8332 6.99984C12.8332 3.78567 10.214 1.1665 6.99984 1.1665ZM9.78817 5.65817L6.48067 8.96567C6.399 9.04734 6.28817 9.094 6.1715 9.094C6.05484 9.094 5.944 9.04734 5.86234 8.96567L4.2115 7.31484C4.04234 7.14567 4.04234 6.86567 4.2115 6.6965C4.38067 6.52734 4.66067 6.52734 4.82984 6.6965L6.1715 8.03817L9.16984 5.03984C9.339 4.87067 9.61901 4.87067 9.78817 5.03984C9.95734 5.209 9.95734 5.48317 9.78817 5.65817Z" fill="#F8F0FB"/>
+                            </svg>
+                        )}
                         <div className="rare-el__row">
                             {minLimitError ? (
                                 <span className="rare-el__row-error">The limit is <span className="rare-el__row-error--red">low</span></span>
@@ -78,9 +80,11 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                     <div className="rare__item-el rare-el">
                         <input className="rare-el__limit" value={maxLimit} onChange={onChangeMaxLimit} placeholder="500" type="number"/>
                         <span className="rare-el__icon">$</span>
-                        <svg className={classNames("rare-el__save", !!maxLimit && "active")} fill="none" height="14" viewBox="0 0 14 14" width="14">
-                            <path d="M6.99984 1.1665C3.78567 1.1665 1.1665 3.78567 1.1665 6.99984C1.1665 10.214 3.78567 12.8332 6.99984 12.8332C10.214 12.8332 12.8332 10.214 12.8332 6.99984C12.8332 3.78567 10.214 1.1665 6.99984 1.1665ZM9.78817 5.65817L6.48067 8.96567C6.399 9.04734 6.28817 9.094 6.1715 9.094C6.05484 9.094 5.944 9.04734 5.86234 8.96567L4.2115 7.31484C4.04234 7.14567 4.04234 6.86567 4.2115 6.6965C4.38067 6.52734 4.66067 6.52734 4.82984 6.6965L6.1715 8.03817L9.16984 5.03984C9.339 4.87067 9.61901 4.87067 9.78817 5.03984C9.95734 5.209 9.95734 5.48317 9.78817 5.65817Z" fill="#F8F0FB"/>
-                        </svg>
+                        {maxLimitError && (
+                            <svg className={classNames("rare-el__save", !!minLimit && "active")} fill="none" height="14" viewBox="0 0 14 14" width="14">
+                                <path d="M6.99984 1.1665C3.78567 1.1665 1.1665 3.78567 1.1665 6.99984C1.1665 10.214 3.78567 12.8332 6.99984 12.8332C10.214 12.8332 12.8332 10.214 12.8332 6.99984C12.8332 3.78567 10.214 1.1665 6.99984 1.1665ZM9.78817 5.65817L6.48067 8.96567C6.399 9.04734 6.28817 9.094 6.1715 9.094C6.05484 9.094 5.944 9.04734 5.86234 8.96567L4.2115 7.31484C4.04234 7.14567 4.04234 6.86567 4.2115 6.6965C4.38067 6.52734 4.66067 6.52734 4.82984 6.6965L6.1715 8.03817L9.16984 5.03984C9.339 4.87067 9.61901 4.87067 9.78817 5.03984C9.95734 5.209 9.95734 5.48317 9.78817 5.65817Z" fill="#F8F0FB"/>
+                            </svg>
+                        )}
                         <div className="rare-el__row">
                             {maxLimitError ? (
                                 <span className="rare-el__row-error">The limit is <span className="rare-el__row-error--red">low</span></span>
@@ -99,14 +103,89 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                         </div>
                     </div>
                 </td>
-                <td className="rare__item rare__item--bought">
-                    <span className="rare__item-bold">{`$${bought}`}</span>
-                    <span className="rare__item-text">/</span>
-                    <span className="rare__item-bold">{boughtFloat}</span>
-                    <span className="rare__item-text">/</span>
-                    <span className="rare__item-text">{`${boughtDays} d.`}</span>
+                <td className="rare__item rare__item--bought rare__item--bought--common">
+                    <span className="rare__item-row">
+                        <span className="rare__item-bold">{`$${bought}`}</span>
+                        <span className="rare__item-text">/</span>
+                        <span className="rare__item-bold">{boughtFloat}</span>
+                        <span className="rare__item-text">/</span>
+                        <span className="rare__item-text">{`${boughtDays} d.`}</span>
+                    </span>
+                    <span className="rare__item-row">
+                        <span className="rare__item-bold">{`$${bought}`}</span>
+                        <span className="rare__item-text">/</span>
+                        <span className="rare__item-bold">{boughtFloat}</span>
+                        <span className="rare__item-text">/</span>
+                        <span className="rare__item-text">{`${boughtDays} d.`}</span>
+                    </span>
+                    <span className="rare__item-row">
+                        <span className="rare__item-bold">{`$${bought}`}</span>
+                        <span className="rare__item-text">/</span>
+                        <span className="rare__item-bold">{boughtFloat}</span>
+                        <span className="rare__item-text">/</span>
+                        <span className="rare__item-text">{`${boughtDays} d.`}</span>
+                    </span>
+                    <span className="rare__item-more rare__item-more--common">+3</span>
+                    <ul className="rare__item-list rare-list rare-list--common">
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                        <li className="rare-list__el">
+                            <span className="rare-list__el-bold">$3 821.35</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">0.071</span>
+                            <span className="rare-list__el-text">/</span>
+                            <span className="rare-list__el-text">5 d.</span>
+                        </li>
+                    </ul>
                 </td>
-                <td className="rare__item rare__item-bold">{`$${price}`}</td>
+                <td className="rare__item rare__item-bold rare__item--last--tm">{`$${price}`}</td>
                 <td className="rare__item rare__item--price">
                     <span className="rare__item-row">
                         <svg className="rare__item-icon" fill="none" height="20" viewBox="0 0 21 20" width="21">
@@ -219,8 +298,8 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                         </li>
                     </ul>
                 </td>
-                <td className="rare__item rare__item--number">{sales}</td>
-                <td className="rare__item rare__item--icon">
+                <td className="rare__item rare__item--last">{sales}</td>
+                <td className="rare__item rare__item--icon rare__item--icon">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                         <rect width="30" height="30" rx="10" fill="#181925"/>
                         <path d="M9 21.6666H21" stroke="#A9A5B0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

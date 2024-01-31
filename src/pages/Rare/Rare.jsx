@@ -37,6 +37,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image2,
@@ -55,6 +84,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image3,
@@ -73,6 +131,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image4,
@@ -91,6 +178,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -109,6 +225,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -127,6 +272,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -145,6 +319,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -163,6 +366,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
     ]
 
@@ -223,20 +455,22 @@ export default function Rare() {
                         <thead>
                             <tr>
                                 <td className="rare__header rare__header--item">Item</td>
-                                <td className="rare__header rare__header--number">Number</td>
+                                <td className="rare__header rare__header--number rare__header--number--rare">Number</td>
                                 <td className="rare__header rare__header--limit">
-                                    <span className="rare__header-text">Min Limit</span>
-                                    <svg className="rare__header-icon" fill="none" height="14" viewBox="0 0 13 14" width="13">
-                                        <path d="M5.49407 0.872872C5.89284 0.41241 6.60716 0.41241 7.00593 0.872872L10.0132 4.34535C10.5741 4.99299 10.114 6 9.25725 6L3.24275 6C2.386 6 1.92594 4.99299 2.48682 4.34535L5.49407 0.872872Z" fill="#8075FF"/>
-                                        <path d="M7.00593 13.1271C6.60716 13.5876 5.89284 13.5876 5.49407 13.1271L2.48682 9.65465C1.92594 9.00701 2.386 8 3.24275 8H9.25725C10.114 8 10.5741 9.00701 10.0132 9.65465L7.00593 13.1271Z" fill="#5B5A65"/>
-                                    </svg>
-                                </td>
-                                <td className="rare__header rare__header--limit">
-                                    <span className="rare__header-text">Max limit</span>
-                                    <svg className="rare__header-icon" fill="none" height="14" viewBox="0 0 13 14" width="13">
-                                        <path d="M5.49407 0.872872C5.89284 0.41241 6.60716 0.41241 7.00593 0.872872L10.0132 4.34535C10.5741 4.99299 10.114 6 9.25725 6L3.24275 6C2.386 6 1.92594 4.99299 2.48682 4.34535L5.49407 0.872872Z" fill="#8075FF"/>
-                                        <path d="M7.00593 13.1271C6.60716 13.5876 5.89284 13.5876 5.49407 13.1271L2.48682 9.65465C1.92594 9.00701 2.386 8 3.24275 8H9.25725C10.114 8 10.5741 9.00701 10.0132 9.65465L7.00593 13.1271Z" fill="#5B5A65"/>
-                                    </svg>
+                                    <span className="rare__header-block">
+                                        <span className="rare__header-text">Min Limit</span>
+                                        <svg className="rare__header-icon" fill="none" height="14" viewBox="0 0 13 14" width="13">
+                                            <path d="M5.49407 0.872872C5.89284 0.41241 6.60716 0.41241 7.00593 0.872872L10.0132 4.34535C10.5741 4.99299 10.114 6 9.25725 6L3.24275 6C2.386 6 1.92594 4.99299 2.48682 4.34535L5.49407 0.872872Z" fill="#8075FF"/>
+                                            <path d="M7.00593 13.1271C6.60716 13.5876 5.89284 13.5876 5.49407 13.1271L2.48682 9.65465C1.92594 9.00701 2.386 8 3.24275 8H9.25725C10.114 8 10.5741 9.00701 10.0132 9.65465L7.00593 13.1271Z" fill="#5B5A65"/>
+                                        </svg>
+                                    </span>
+                                    <span className="rare__header-block">
+                                        <span className="rare__header-text">Max limit</span>
+                                        <svg className="rare__header-icon" fill="none" height="14" viewBox="0 0 13 14" width="13">
+                                            <path d="M5.49407 0.872872C5.89284 0.41241 6.60716 0.41241 7.00593 0.872872L10.0132 4.34535C10.5741 4.99299 10.114 6 9.25725 6L3.24275 6C2.386 6 1.92594 4.99299 2.48682 4.34535L5.49407 0.872872Z" fill="#8075FF"/>
+                                            <path d="M7.00593 13.1271C6.60716 13.5876 5.89284 13.5876 5.49407 13.1271L2.48682 9.65465C1.92594 9.00701 2.386 8 3.24275 8H9.25725C10.114 8 10.5741 9.00701 10.0132 9.65465L7.00593 13.1271Z" fill="#5B5A65"/>
+                                        </svg>
+                                    </span>
                                 </td>
                                 <td className="rare__header rare__header--bought">
                                     <span className="rare__header-text">Bought, Flot, Days</span>
@@ -245,7 +479,7 @@ export default function Rare() {
                                         <path d="M7.00593 13.1271C6.60716 13.5876 5.89284 13.5876 5.49407 13.1271L2.48682 9.65465C1.92594 9.00701 2.386 8 3.24275 8H9.25725C10.114 8 10.5741 9.00701 10.0132 9.65465L7.00593 13.1271Z" fill="#5B5A65"/>
                                     </svg>
                                 </td>
-                                <td className="rare__header">
+                                <td className="rare__header rare__header--price">
                                     <span className="rare__header-text">Your TM Price</span>
                                     <svg className="rare__header-icon" fill="none" height="14" viewBox="0 0 13 14" width="13">
                                         <path d="M5.49407 0.872872C5.89284 0.41241 6.60716 0.41241 7.00593 0.872872L10.0132 4.34535C10.5741 4.99299 10.114 6 9.25725 6L3.24275 6C2.386 6 1.92594 4.99299 2.48682 4.34535L5.49407 0.872872Z" fill="#8075FF"/>
@@ -266,7 +500,7 @@ export default function Rare() {
                                         <path d="M7.00593 13.1271C6.60716 13.5876 5.89284 13.5876 5.49407 13.1271L2.48682 9.65465C1.92594 9.00701 2.386 8 3.24275 8H9.25725C10.114 8 10.5741 9.00701 10.0132 9.65465L7.00593 13.1271Z" fill="#5B5A65"/>
                                     </svg>
                                 </td>
-                                <td className="rare__header">
+                                <td className="rare__header rare__header--last">
                                     <span className="rare__header-text">Weelky Rare</span>
                                     <svg className="rare__header-icon" fill="none" height="14" viewBox="0 0 13 14" width="13">
                                         <path d="M5.49407 0.872872C5.89284 0.41241 6.60716 0.41241 7.00593 0.872872L10.0132 4.34535C10.5741 4.99299 10.114 6 9.25725 6L3.24275 6C2.386 6 1.92594 4.99299 2.48682 4.34535L5.49407 0.872872Z" fill="#8075FF"/>

@@ -5,7 +5,7 @@
     flex-direction: column;
     margin: 40px 70px 40px 40px;
     padding: 30px;
-    height: 100%;
+    height: calc(100% - 170px);
 
     &-search {
         position: relative;
@@ -43,10 +43,12 @@
 .accounts {
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
+    position: relative;
 
     & tbody {
-        max-height: 590px;
         overflow-y: overlay;
+        max-height: 100%;
 
         &::-webkit-scrollbar {
             width: 25px;

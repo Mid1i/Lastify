@@ -1,9 +1,10 @@
 .content__logs {
     background: var(--background-secondary);
     border-radius: 15px;
-    height: 100%;
-    margin: 40px 70px 40px 40px;
     padding: 30px;
+    overflow-y: hidden;
+    margin: 40px 70px 40px 40px;
+    height: calc(100% - 170px);
 }
 
 .logs-top {
@@ -196,7 +197,7 @@
     flex-direction: column;
     overflow-y: overlay;
     padding: 10px 30px;
-    max-height: 580px;
+    max-height: 85%;
     max-width: 1000px;
 
     &::-webkit-scrollbar {

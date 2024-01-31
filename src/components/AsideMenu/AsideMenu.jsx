@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import {useContext, useReducer} from "react";
+import {useContext, useEffect, useReducer} from "react";
 import classNames from "classnames";
 
 import {appContext} from "../../services";
@@ -8,11 +8,20 @@ import "./AsideMenu.style.scss";
 
 
 export default function AsideMenu({activePage}) {
-    const [openDashboard, setOpenDashboard] = useReducer(prev => !prev, true);
+    const [openDashboard, setOpenDashboard] = useReducer(prev => !prev, false);
     const [openPrices, setOpenPrices] = useReducer(prev => !prev, false);
     const {openMenu, setOpenMenu} = useContext(appContext);
 
     const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (activePage.includes('dashboard')) {
+            setOpenDashboard(true);
+        } else if (activePage.includes('prices')) {
+            setOpenPrices(true);
+        }
+    }, []);
 
 
     return (

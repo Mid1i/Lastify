@@ -5,7 +5,7 @@
     flex-direction: column;
     margin: 40px 70px 40px 60px;
     padding: 30px;
-    height: 100%;
+    height: calc(100% - 170px);
 }
 
 .rare-top {
@@ -148,28 +148,15 @@
 .rare {
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
+    position: relative;
 
     & tbody {
-        overflow: overlay;
-        max-height: 600px;
-        height: 100%;
+        overflow-y: overlay;
+        max-height: 100%;
 
         &::-webkit-scrollbar {
-            width: 25px;
-
-            &-track {
-                background: var(--outline-primary);
-                background-clip: content-box;
-                border: 12px solid transparent;
-                border-radius: 15px;
-            }
-
-            &-thumb {
-                background: var(--text-bold);
-                background-clip: content-box;
-                border: 11px solid transparent;
-                border-radius: 15px;
-            }
+            width: 0px;
         }
     }
 
@@ -181,13 +168,14 @@
     }
 
     & thead tr {
-        padding: 0px 60px 40px 20px;
+        padding: 0px 20px 40px 20px;
     }
 
     & tbody tr {
         background: var(--button-primary);
         border-radius: 10px;
         margin-bottom: 10px;
+        position: relative;
         padding: 20px;
     }
 
@@ -205,11 +193,17 @@
         }
 
         &--item {
-            flex: 0 0 230px;
+            flex: 0 0 235px;
         }
 
         &--limit {
-            flex: 0 0 140px;
+            flex: 0 0 300px;
+            justify-content: space-between;
+        }
+
+        &-block {
+            flex: 0 0 145px;
+            margin-right: 15px;
         }
 
         &--bought {
@@ -217,7 +211,7 @@
         }
 
         &--number {
-            flex: 0 0 60px;
+            flex: 0 0 50px;
         }
 
         &-text {
