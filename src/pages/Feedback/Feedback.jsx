@@ -12,6 +12,8 @@ import background from "../../assets/images/backgrounds/feedback.png";
 
 export default function Feedback() {
     const {theme} = useContext(appContext);
+
+    const onSubmit = (event) => {} // Апи запрос на отправку фидбека
     
     
     return (
@@ -35,13 +37,13 @@ export default function Feedback() {
                             <path d="M6.41602 1.66666H5.24935C2.33268 1.66666 1.16602 2.83332 1.16602 5.74999V9.24999C1.16602 12.1667 2.33268 13.3333 5.24935 13.3333H8.74935C11.666 13.3333 12.8327 12.1667 12.8327 9.24999V8.08332" stroke="#5B5A65" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </div>
-                    <form className="content__feedback-form feedback-form">
+                    <form className="content__feedback-form feedback-form" onSubmit={onSubmit}>
                         <input className="feedback-form__input" placeholder="The text of the review" name="feedback" type="text"/>
                         <div className="feedback-form__checkbox">
                             <input className={classNames("feedback-form__checkbox-input", theme === 'light' && 'light')} id="checkbox" name="checkbox" required type="checkbox"/>
                             <label className="feedback-form__checkbox-label" htmlFor="checkbox">I agree with the personal data processing policy</label>
                         </div>
-                        <button className="feedback-form__button">Leave a review</button>
+                        <button className="feedback-form__button" type='submit'>Leave a review</button>
                     </form>
                 </div>
             </div>

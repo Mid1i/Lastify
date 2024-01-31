@@ -1,9 +1,37 @@
 import classNames from "classnames";
+import {useState} from "react";
 
 import "./RareItem.style.scss";
 
 
-export default function RareItem({image, name, skin, quality, float, type, number, minLimit, minLimitDays, maxLimit, maxLimitDays, bought, boughtFloat, boughtDays, price, sales}) {
+export default function RareItem({image, name, skin, quality, float, type, number, bought, boughtFloat, boughtDays, price, sales}) {
+    const [minLimit, setMinLimit] = useState('');
+    const [maxLimit, setMaxLimit] = useState('');
+    const [minLimitError, setMinLimitError] = useState(false);
+    const [maxLimitError, setMaxLimitError] = useState(false);
+    
+
+    const onChangeMinLimit = (event) => {
+        setMinLimit(event.target.value);
+        
+        if (event.target.value < Number(price) * 0.8 && event.target.value !== '') {
+            setMinLimitError(true);
+        } else {
+            setMinLimitError(false);
+        }
+    }
+
+    const onChangeMaxLimit = (event) => {
+        setMaxLimit(event.target.value);
+
+        if (event.target.value < Number(price) * 0.99 && event.target.value !== '') {
+            setMaxLimitError(true);
+        } else {
+            setMaxLimitError(false);
+        }
+    }
+
+    
     return (
         <tr>
             <td className="rare__item rare__item--item">
@@ -25,21 +53,44 @@ export default function RareItem({image, name, skin, quality, float, type, numbe
             </td>
             <td className="rare__item rare__item--number">{number}</td>
             <td className="rare__item rare__item--limit">
-                <span className="rare__item-limit">
-                    <span className="rare__item-bold">$</span>
-                    <span className="rare__item-text">{minLimit}</span>
-                    <span className="rare__item-text">|</span>
-                    <span className="rare__item-bold">{`${minLimitDays} d.`}</span>
-                </span>
+                <div className="rare__item-el rare-el">
+                    <input className="rare-el__limit" value={minLimit} onChange={onChangeMinLimit} placeholder="500" type="number"/>
+                    <span className="rare-el__icon">$</span>
+                    <svg className={classNames("rare-el__save", !!minLimit && "active")} fill="none" height="14" viewBox="0 0 14 14" width="14">
+                        <path d="M6.99984 1.1665C3.78567 1.1665 1.1665 3.78567 1.1665 6.99984C1.1665 10.214 3.78567 12.8332 6.99984 12.8332C10.214 12.8332 12.8332 10.214 12.8332 6.99984C12.8332 3.78567 10.214 1.1665 6.99984 1.1665ZM9.78817 5.65817L6.48067 8.96567C6.399 9.04734 6.28817 9.094 6.1715 9.094C6.05484 9.094 5.944 9.04734 5.86234 8.96567L4.2115 7.31484C4.04234 7.14567 4.04234 6.86567 4.2115 6.6965C4.38067 6.52734 4.66067 6.52734 4.82984 6.6965L6.1715 8.03817L9.16984 5.03984C9.339 4.87067 9.61901 4.87067 9.78817 5.03984C9.95734 5.209 9.95734 5.48317 9.78817 5.65817Z" fill="#F8F0FB"/>
+                    </svg>
+                    <div className="rare-el__row">
+                        {minLimitError && (
+                            <span className="rare-el__row-error">The limit is <span className="rare-el__row-error--red">low</span></span>
+                        )}
+                    </div>
+                </div>
                 <svg className="rare__item-dash" width="11" height="19" viewBox="0 0 11 19" fill="none">
                     <path d="M0.166992 1H10.167" stroke="#494B6F"/>
                 </svg>
-                <span className="rare__item-limit">
-                    <span className="rare__item-bold">$</span>
-                    <span className="rare__item-text rare__item-text--flex">{maxLimit}</span>
-                    <span className="rare__item-text rare__item-text--flex">|</span>
-                    <span className="rare__item-bold">{`${maxLimitDays} d.`}</span>
-                </span>
+                <div className="rare__item-el rare-el">
+                    <input className="rare-el__limit" value={maxLimit} onChange={onChangeMaxLimit} placeholder="500" type="number"/>
+                    <span className="rare-el__icon">$</span>
+                    <svg className={classNames("rare-el__save", !!maxLimit && "active")} fill="none" height="14" viewBox="0 0 14 14" width="14">
+                        <path d="M6.99984 1.1665C3.78567 1.1665 1.1665 3.78567 1.1665 6.99984C1.1665 10.214 3.78567 12.8332 6.99984 12.8332C10.214 12.8332 12.8332 10.214 12.8332 6.99984C12.8332 3.78567 10.214 1.1665 6.99984 1.1665ZM9.78817 5.65817L6.48067 8.96567C6.399 9.04734 6.28817 9.094 6.1715 9.094C6.05484 9.094 5.944 9.04734 5.86234 8.96567L4.2115 7.31484C4.04234 7.14567 4.04234 6.86567 4.2115 6.6965C4.38067 6.52734 4.66067 6.52734 4.82984 6.6965L6.1715 8.03817L9.16984 5.03984C9.339 4.87067 9.61901 4.87067 9.78817 5.03984C9.95734 5.209 9.95734 5.48317 9.78817 5.65817Z" fill="#F8F0FB"/>
+                    </svg>
+                    <div className="rare-el__row">
+                        {maxLimitError ? (
+                            <span className="rare-el__row-error">The limit is <span className="rare-el__row-error--red">low</span></span>
+                        ) : maxLimit !== '' ? (
+                            <>
+                                <span className="rare-el__row-empty"></span>
+                                <span className="rare-el__row-time">
+                                    <svg className="rare-el__row-icon" fill="none" height="15" viewBox="0 0 14 15" width="14">
+                                        <path d="M5.92687 0.0903794C4.21475 0.491123 2.88824 1.27658 1.7931 2.54293C0.991025 3.47266 0.559139 4.32224 0.219799 5.66874C-0.0732665 6.87097 -0.0732665 7.67246 0.219799 8.87469C0.559139 10.2212 0.991025 11.0708 1.7931 12.0005C3.22758 13.6516 4.95513 14.4851 7.00659 14.4851C8.44107 14.4851 9.55163 14.1485 10.7393 13.347C11.1712 13.0424 11.5877 12.802 11.6494 12.802C11.7265 12.802 12.0041 13.0264 12.2818 13.3149L12.7908 13.8279V12.0326V10.2372H11.1712C10.2766 10.2372 9.55163 10.3013 9.55163 10.3655C9.55163 10.4296 9.82927 10.7662 10.1686 11.1189C10.8936 11.8562 10.8473 11.9524 9.48993 12.6898C8.62616 13.1546 8.44107 13.1867 7.00659 13.2027C5.60296 13.2027 5.38701 13.1546 4.55409 12.7218C3.38183 12.1127 2.34838 11.0387 1.76225 9.82045C1.34579 8.95484 1.29952 8.73042 1.29952 7.27171C1.29952 5.81301 1.34579 5.58859 1.76225 4.72298C2.34838 3.50472 3.38183 2.43072 4.55409 1.82159C5.38701 1.38879 5.60296 1.3407 7.00659 1.3407C8.41022 1.3407 8.62616 1.38879 9.45909 1.82159C11.2638 2.76735 12.5131 4.54665 12.7445 6.53434C12.8371 7.23965 12.945 7.60834 13.1455 7.73658C13.5157 7.97702 13.9322 7.68849 13.9939 7.14348C14.0556 6.59846 13.6391 4.91534 13.2227 3.98561C12.7908 3.05589 11.0632 1.26055 10.1686 0.811719C8.79583 0.138469 7.02201 -0.166097 5.92687 0.0903794Z" fill="black"/>
+                                        <path d="M6.12725 2.55897C5.88046 2.70324 5.84961 3.0078 5.84961 5.17182C5.84961 7.27172 5.88046 7.65644 6.0964 7.73659C6.23522 7.78467 7.33036 7.83276 8.5489 7.83276C10.369 7.83276 10.7855 7.78467 10.9551 7.57629C11.0939 7.39996 11.1094 7.25569 10.986 7.06333C10.8626 6.83892 10.477 6.7748 8.91909 6.71068L7.00645 6.63053L6.96017 4.72299C6.9139 2.52691 6.77508 2.15823 6.12725 2.55897Z" fill="black"/>
+                                    </svg>
+                                    48h
+                                </span>
+                            </>
+                        ) : ''}
+                    </div>
+                </div>
             </td>
             <td className="rare__item rare__item--bought">
                 <span className="rare__item-bold">{`$${bought}`}</span>

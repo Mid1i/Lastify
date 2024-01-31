@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import {useReducer} from "react";
 
-import {AsideMenu, Header, RareItem} from "../../components";
+import {AsideMenu, Header, CommonItem} from "../../components";
 
-import "./Rare.style.scss";
+import "./Common.style.scss";
 
 import image1 from "../../assets/images/skins/1.png";
 import image2 from "../../assets/images/skins/2.png";
@@ -11,11 +11,11 @@ import image3 from "../../assets/images/skins/3.png";
 import image4 from "../../assets/images/skins/4.png";
 
 
-export default function Rare() {
+export default function Common() {
     const [openRare, setOpenRare] = useReducer(prev => !prev, false);
     const [openPrice, setOpenPrice] = useReducer(prev => !prev, false);
 
-    const rareItems = [
+    const commonItems = [
         {
             'image': image1,
             'name': 'USP-S',
@@ -33,6 +33,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image2,
@@ -51,6 +80,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image3,
@@ -69,6 +127,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image4,
@@ -87,6 +174,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -105,6 +221,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -123,6 +268,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -141,6 +315,35 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
         {
             'image': image1,
@@ -159,15 +362,44 @@ export default function Rare() {
             'boughtDays': '5',
             'price': '3921.35',
             'sales': '23',
+            'minPrice': '3 921.35',
+            'maxPrice': '3 921.35',
+            'averagePrice': '3 921.35',
+            'history': [
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+                {
+                    'time': '15:56', 
+                    'date': '10.04.23', 
+                    'price': '3 821.35', 
+                    'days': '1.4',
+                },
+            ],
         },
     ]
 
 
     return (
         <>
-            <AsideMenu activePage='prices/rare'/>
+            <AsideMenu activePage='prices/common'/>
             <div className="content">
-                <Header title='Rare'/>
+                <Header title='Common'/>
                 <div className="content__rare">
                     <div className="content__rare-top rare-top">
                         <div className="rare-top__search">
@@ -272,7 +504,7 @@ export default function Rare() {
                             </tr>
                         </thead>
                         <tbody>
-                            {rareItems.map((item, index) => (<RareItem {...item} key={index}/>))}
+                            {commonItems.map((item, index) => (<CommonItem {...item} key={index}/>))}
                         </tbody>
                     </table>
                 </div>

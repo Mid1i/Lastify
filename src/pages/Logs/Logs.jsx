@@ -1,4 +1,4 @@
-import {useContext, useReducer} from "react";
+import {useContext, useEffect, useState, useReducer} from "react";
 import classNames from "classnames";
 
 import {AsideMenu, Header, LogsItem} from "../../components";
@@ -9,7 +9,15 @@ import "./Logs.style.scss";
 
 export default function Logs() {
     const [openAccounts, setOpenAccounts] = useReducer(prev => !prev, false);
+    const [searchValue, setSearchValue] = useState('');
+
     const {theme} = useContext(appContext);
+
+
+    useEffect(() => {}, []) // Апи запрос на получение аккаунтов (accounts) и logs 
+
+    useEffect(() => {}, [searchValue]) // Апи запрос на поиск конкретных аккаунтов
+
 
     const accounts = ['Account #1', 'Account #2', 'Account #3', 'Account #4', 'Account #5', 'Account #5'];
 
@@ -22,7 +30,7 @@ export default function Logs() {
                 <div className="content__logs">
                     <div className="content__logs-top logs-top">
                         <div className="logs-top__search">
-                            <input className="logs-top__search-input" placeholder="Username" name="search" type="text"/>
+                            <input className="logs-top__search-input" value={searchValue} onChange={event => setSearchValue(event.target.value)} placeholder="Username" name="search" type="text"/>
                             <svg className="logs-top__search-icon" fill="none" height="20" viewBox="0 0 20 20" width="20">
                                 <path d="M9.58366 17.5C13.9559 17.5 17.5003 13.9556 17.5003 9.58335C17.5003 5.2111 13.9559 1.66669 9.58366 1.66669C5.2114 1.66669 1.66699 5.2111 1.66699 9.58335C1.66699 13.9556 5.2114 17.5 9.58366 17.5Z" stroke="#A9A5B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M18.3337 18.3334L16.667 16.6667" stroke="#A9A5B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -34,7 +42,7 @@ export default function Logs() {
                                 <path d="M4.75593 5.12713C4.35716 5.58759 3.64284 5.58759 3.24407 5.12713L0.236821 1.65465C-0.324055 1.00701 0.135997 -8.62339e-07 0.99275 -7.87439e-07L7.00725 -2.61634e-07C7.864 -1.86735e-07 8.32406 1.00701 7.76318 1.65465L4.75593 5.12713Z" fill="#FFFCEF" fill-opacity="0.75"/>
                             </svg>
                             <div className={classNames("logs-top__accounts-content logs-accounts", openAccounts && "active")}>
-                                <input className="logs-accounts__search" placeholder="Profile Name" name="searchAccounts" type="text"/>
+                                <input className="logs-accounts__search" placeholder="Profile Name" value={searchValue} onChange={event => setSearchValue(event.target.value)} name="searchAccounts" type="text"/>
                                 <svg className="logs-accounts__icon" fill="none" height="20" viewBox="0 0 20 20" width="20">
                                     <path d="M9.58366 17.5C13.9559 17.5 17.5003 13.9556 17.5003 9.58335C17.5003 5.2111 13.9559 1.66669 9.58366 1.66669C5.2114 1.66669 1.66699 5.2111 1.66699 9.58335C1.66699 13.9556 5.2114 17.5 9.58366 17.5Z" stroke="#A9A5B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M18.3337 18.3334L16.667 16.6667" stroke="#A9A5B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

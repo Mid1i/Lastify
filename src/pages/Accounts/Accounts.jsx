@@ -1,3 +1,5 @@
+import {useEffect, useState} from "react";
+
 import {AccountsItem, AsideMenu, Header} from "../../components";
 
 import "./Accounts.style.scss";
@@ -6,6 +8,14 @@ import accountImage from "../../assets/images/accounts/1.png";
 
 
 export default function Accounts() {
+    const [searchValue, setSearchValue] = useState('');
+
+
+    useEffect(() => {}, []) // Апи запрос на получение аккаунтов (accountsItems)
+
+    useEffect(() => {}, [searchValue]) // Апи запрос на получение конкретных аккаунтов по поиску (accountsItems)
+    
+    
     const accountsItems = [
         {
             'number': '33',
@@ -113,7 +123,7 @@ export default function Accounts() {
                 <Header title='Steam accounts'/>
                 <div className="content__accounts">
                     <div className="content__accounts-search">
-                        <input placeholder="Username" name="search" type="text"/>
+                        <input placeholder="Username" value={searchValue} onChange={event => setSearchValue(event.target.value)} name="search" type="text"/>
                         <svg fill="none" height="20" viewBox="0 0 20 20" width="20">
                             <path d="M9.58366 17.5C13.9559 17.5 17.5003 13.9556 17.5003 9.58335C17.5003 5.2111 13.9559 1.66669 9.58366 1.66669C5.2114 1.66669 1.66699 5.2111 1.66699 9.58335C1.66699 13.9556 5.2114 17.5 9.58366 17.5Z" stroke="#A9A5B0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M18.3337 18.3334L16.667 16.6667" stroke="#A9A5B0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

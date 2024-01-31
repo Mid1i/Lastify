@@ -1,6 +1,6 @@
 import {Routes, Route} from "react-router-dom";
 
-import {Accounts, Feedback, Overview, Rare, Logs, Sales, Settings} from "../pages"; 
+import {Accounts, Feedback, Overview, Common, Logs, Rare, Sales, Settings} from "../pages"; 
 
 
 export default function Routers() {
@@ -12,6 +12,7 @@ export default function Routers() {
             <Route path='/accounts' element={<Accounts/>}/>
             <Route path='/feedback' element={<Feedback/>}/>
             <Route path='/settings' element={<Settings/>}/>
+            <Route path='/prices/common' element={<Common/>}/>
             <Route path='/dashboard/sales' element={<Sales/>}/>
         </Routes>
     );

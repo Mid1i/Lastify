@@ -1,4 +1,4 @@
-import {useContext, useReducer} from "react";
+import {useContext, useEffect, useState, useReducer} from "react";
 import classNames from "classnames";
 
 import {AsideMenu, Header, OverviewWidget, OverviewRequestsItem} from "../../components";
@@ -9,7 +9,14 @@ import "./Overview.style.scss";
 
 export default function Overview() {
     const [openFilters, setOpenFilters] = useReducer(prev => !prev, false);
+    const [currentFilter, setCurrentFilter] = useState('1 minute');
     const {theme} = useContext(appContext);
+
+
+    useEffect(() => {}, []) // Здесь апи запрос на получение предметов и верхних виджетов (requestsItems, overviewWidgets)
+
+    useEffect(() => {}, [currentFilter]) // Здесь апи запрос на изменение фильтра (requestsItems с текущим фильтром '1 минута', '15', '60')
+
 
     const overviewWidgets = [
         {
@@ -136,15 +143,15 @@ export default function Overview() {
                                 <path d="M4.75593 5.12713C4.35716 5.58759 3.64284 5.58759 3.24407 5.12713L0.236821 1.65465C-0.324055 1.00701 0.135997 -8.62339e-07 0.99275 -7.87439e-07L7.00725 -2.61634e-07C7.864 -1.86735e-07 8.32406 1.00701 7.76318 1.65465L4.75593 5.12713Z" fill="#FFFCEF" fillOpacity="0.75"/>
                             </svg>
                             <ul className={classNames("requests-top__filter-content requests-filters", openFilters && "active")}>
-                                <li className="requests-filters__el">
+                                <li className="requests-filters__el" onClick={() => setCurrentFilter('1 minute')}>
                                     <input className={classNames("requests-filters__el-input", theme === 'light' && 'light')} defaultChecked id="1_minute" name="timeFilter" type="radio"/>
                                     <label className="requests-filters__el-label" htmlFor="1_minute">1 minute</label>
                                 </li>
-                                <li className="requests-filters__el">
+                                <li className="requests-filters__el" onClick={() => setCurrentFilter('15 minutes')}>
                                     <input className={classNames("requests-filters__el-input", theme === 'light' && 'light')} id="15_minutes" name="timeFilter" type="radio"/>
                                     <label className="requests-filters__el-label" htmlFor="15_minutes">15 minutes</label>
                                 </li>
-                                <li className="requests-filters__el">
+                                <li className="requests-filters__el" onClick={() => setCurrentFilter('60 minutes')}>
                                     <input className={classNames("requests-filters__el-input", theme === 'light' && 'light')} id="60_minutes" name="timeFilter" type="radio"/>
                                     <label className="requests-filters__el-label" htmlFor="60_minutes">60 minutes</label>
                                 </li>
