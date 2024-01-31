@@ -1,4 +1,4 @@
-import {useReducer} from "react";
+import {useEffect, useReducer} from "react";
 import classNames from "classnames";
 
 import {AsideMenu, Header, SalesItem} from "../../components";
@@ -14,6 +14,10 @@ import image4 from "../../assets/images/skins/4.png";
 export default function Sales() {
     const [openType, setOpenType] = useReducer(prev => !prev, false);
     const [openFloat, setOpenFloat] = useReducer(prev => !prev, false);
+
+
+    useEffect(() => {}, []) // Апи запрос на получение предметов (salesItems)
+
 
     const salesItems = [
         {

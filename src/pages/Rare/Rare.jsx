@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import {useReducer} from "react";
+import {useEffect, useReducer} from "react";
 
 import {AsideMenu, Header, RareItem} from "../../components";
 
@@ -14,6 +14,10 @@ import image4 from "../../assets/images/skins/4.png";
 export default function Rare() {
     const [openRare, setOpenRare] = useReducer(prev => !prev, false);
     const [openPrice, setOpenPrice] = useReducer(prev => !prev, false);
+
+
+    useEffect(() => {}, []) // Апи запрос на получение предметов (rareItems)
+
 
     const rareItems = [
         {

@@ -4,12 +4,15 @@ import "./Settings.style.scss";
 
 
 export default function Settings() {
+    const onSubmit = () => {} // Апи запрос на отправку новых настроек
+
+
     return (
         <>
             <AsideMenu activePage='settings'/>
             <div className="content">
                 <Header title='Settings'/>
-                <form className="content__settings">
+                <form className="content__settings" onSubmit={onSubmit}>
                     <div className="content__settings-row settings">
                         <div className="settings__item">
                             <label className="settings__item-label" htmlFor="accounts">Working accounts</label>

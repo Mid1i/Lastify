@@ -338,9 +338,7 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                         </table>
                     </div>
                 </td>
-            </tr>
-
-            
+            </tr>   
         </>
     );
 }
