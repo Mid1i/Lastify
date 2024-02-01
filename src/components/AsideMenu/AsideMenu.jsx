@@ -64,8 +64,8 @@ export default function AsideMenu({activePage}) {
                 </li>
                 <li className={classNames("nav-menu__list-el nav-subel", activePage.includes('common') && "active", !openPrices && "hidden", !openMenu && "small")} onClick={() => navigate('/prices/common')}>Common</li>
                 <li className={classNames("nav-menu__list-el nav-subel", activePage.includes('rare') && "active", !openPrices && "hidden", !openMenu && "small")} onClick={() => navigate('/prices/rare')}>Rare</li>
-                <li className={classNames("nav-menu__list-el nav-el", activePage.includes('accounts') && "active")}>
-                    <span className="nav-el__page" onClick={() => navigate('/accounts')}>
+                <li className={classNames("nav-menu__list-el nav-el", activePage.includes('accounts') && "active")} onClick={() => navigate('/accounts')}>
+                    <span className="nav-el__page">
                         <svg className={classNames("nav-el__page-icon", activePage.includes('accounts') && "active")} fill="none" height="20" viewBox="0 0 20 20" width="20">
                             <path d="M10.1331 9.05768C10.0498 9.04935 9.94981 9.04935 9.85814 9.05768C7.8748 8.99102 6.2998 7.36602 6.2998 5.36602C6.2998 3.32435 7.9498 1.66602 9.99981 1.66602C12.0415 1.66602 13.6998 3.32435 13.6998 5.36602C13.6915 7.36602 12.1165 8.99102 10.1331 9.05768Z" fill="#A9A5B0"/>
                             <path d="M5.9666 12.134C3.94993 13.484 3.94993 15.684 5.9666 17.0257C8.25827 18.559 12.0166 18.559 14.3083 17.0257C16.3249 15.6757 16.3249 13.4757 14.3083 12.134C12.0249 10.609 8.2666 10.609 5.9666 12.134Z" fill="#A9A5B0"/>
@@ -73,8 +73,8 @@ export default function AsideMenu({activePage}) {
                         <span className={classNames("nav-el__page-text", activePage.includes('accounts') && "active", !openMenu && "small")}>Steam accounts</span>
                     </span>
                 </li>
-                <li className={classNames("nav-menu__list-el nav-el", activePage.includes('logs') && "active")}>
-                    <span className="nav-el__page" onClick={() => navigate('/logs')}>
+                <li className={classNames("nav-menu__list-el nav-el", activePage.includes('logs') && "active")} onClick={() => navigate('/logs')}>
+                    <span className="nav-el__page">
                         <svg className={classNames("nav-el__page-icon", activePage.includes('logs') && "active")} fill="none" height="20" viewBox="0 0 20 20" width="20">
                             <path d="M13.1667 1.84164C12.825 1.49997 12.2333 1.73331 12.2333 2.20831V5.11664C12.2333 6.33331 13.2667 7.34164 14.525 7.34164C15.3167 7.34997 16.4167 7.34997 17.3583 7.34997C17.8333 7.34997 18.0833 6.79164 17.75 6.45831C16.55 5.24997 14.4 3.07497 13.1667 1.84164Z" fill="#A9A5B0"/>
                             <path d="M17.0833 8.49169H14.675C12.7 8.49169 11.0916 6.88335 11.0916 4.90835V2.50002C11.0916 2.04169 10.7166 1.66669 10.2583 1.66669H6.72498C4.15831 1.66669 2.08331 3.33335 2.08331 6.30835V13.6917C2.08331 16.6667 4.15831 18.3334 6.72498 18.3334H13.275C15.8416 18.3334 17.9166 16.6667 17.9166 13.6917V9.32502C17.9166 8.86669 17.5416 8.49169 17.0833 8.49169ZM9.58331 14.7917H6.24998C5.90831 14.7917 5.62498 14.5084 5.62498 14.1667C5.62498 13.825 5.90831 13.5417 6.24998 13.5417H9.58331C9.92498 13.5417 10.2083 13.825 10.2083 14.1667C10.2083 14.5084 9.92498 14.7917 9.58331 14.7917ZM11.25 11.4584H6.24998C5.90831 11.4584 5.62498 11.175 5.62498 10.8334C5.62498 10.4917 5.90831 10.2084 6.24998 10.2084H11.25C11.5916 10.2084 11.875 10.4917 11.875 10.8334C11.875 11.175 11.5916 11.4584 11.25 11.4584Z" fill="#A9A5B0"/>
@@ -82,8 +82,8 @@ export default function AsideMenu({activePage}) {
                         <span className={classNames("nav-el__page-text", activePage.includes('logs') && "active", !openMenu && "small")}>Logs</span>
                     </span>
                 </li>
-                <li className={classNames("nav-menu__list-el nav-el", activePage.includes('feedback') && "active")}>
-                    <span className="nav-el__page" onClick={() => navigate('/feedback')}>
+                <li className={classNames("nav-menu__list-el nav-el", activePage.includes('feedback') && "active")} onClick={() => navigate('/feedback')}>
+                    <span className="nav-el__page">
                         <svg className={classNames("nav-el__page-icon", activePage.includes('feedback') && "active")} fill="none" height="20" viewBox="0 0 20 20" width="20">
                             <path d="M11.4417 2.92501L12.9083 5.85835C13.1083 6.26668 13.6417 6.65834 14.0917 6.73334L16.75 7.17501C18.45 7.45834 18.85 8.69168 17.625 9.90834L15.5583 11.975C15.2083 12.325 15.0167 13 15.125 13.4833L15.7167 16.0417C16.1833 18.0667 15.1083 18.85 13.3167 17.7917L10.825 16.3167C10.375 16.05 9.63332 16.05 9.17499 16.3167L6.68332 17.7917C4.89999 18.85 3.81665 18.0583 4.28332 16.0417L4.87499 13.4833C4.98332 13 4.79165 12.325 4.44165 11.975L2.37499 9.90834C1.15832 8.69168 1.54999 7.45834 3.24999 7.17501L5.90832 6.73334C6.34999 6.65834 6.88332 6.26668 7.08332 5.85835L8.54999 2.92501C9.34999 1.33335 10.65 1.33335 11.4417 2.92501Z" fill="#A9A5B0"/>
                         </svg>

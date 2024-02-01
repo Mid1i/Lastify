@@ -6,7 +6,7 @@ import "./CommonItem.style.scss";
 import graffic from "../../assets/images/backgrounds/graffic.png";
 
 
-export default function CommonItem({image, name, skin, quality, float, type, number, bought, boughtFloat, boughtDays, price, sales, minPrice, maxPrice, averagePrice, history}) {
+export default function CommonItem({image, name, skin, quality, float, type, number, st, bought, boughtFloat, boughtDays, price, sales, minPrice, maxPrice, averagePrice, history, boughts}) {
     const [openHistory, setOpenHistory] = useReducer(prev => !prev, false);
     const [openFilter, setOpenFilter] = useReducer(prev => !prev, false);
     const [active, setActive] = useReducer(prev => !prev, false);
@@ -58,6 +58,16 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                             <span className="rare-info__top-name" onClick={setOpenHistory}>{name}</span>
                             ·
                             <span className="rare-info__top-skin" onClick={setOpenHistory}>{skin}</span>
+                            {st && (
+                                <>
+                                    ·
+                                    <span className="sales-info__top-st">ST</span>
+                                    <svg className="sales-info__top-icon" fill="none" height="15" viewBox="0 0 14 15" width="14">
+                                        <path d="M6.43673 2.82469L5.15514 5.42319L2.28777 5.84123C1.77356 5.91581 1.56749 6.54973 1.94038 6.91282L4.01487 8.93431L3.52421 11.7899C3.43589 12.3061 3.97954 12.6927 4.43486 12.4513L7 11.103L9.56514 12.4513C10.0205 12.6907 10.5641 12.3061 10.4758 11.7899L9.98514 8.93431L12.0596 6.91282C12.4325 6.54973 12.2264 5.91581 11.7122 5.84123L8.84486 5.42319L7.56327 2.82469C7.33365 2.36151 6.66832 2.35563 6.43673 2.82469Z" fill="#FFC759"/>
+                                    </svg>
+                                </>
+
+                            )}
                             <svg className="sales-info__top-icon" fill="none" onClick={onCopy} height="17" viewBox="0 0 17 17" width="17">
                                 <path d="M4.3335 6.55584C4.3335 5.9664 4.56765 5.4011 4.98445 4.9843C5.40125 4.5675 5.96655 4.33334 6.556 4.33334H13.7777C14.0695 4.33334 14.3585 4.39083 14.6282 4.50252C14.8978 4.61421 15.1428 4.77792 15.3492 4.9843C15.5556 5.19068 15.7193 5.43568 15.831 5.70533C15.9427 5.97498 16.0002 6.26398 16.0002 6.55584V13.7775C16.0002 14.0694 15.9427 14.3584 15.831 14.628C15.7193 14.8977 15.5556 15.1427 15.3492 15.3491C15.1428 15.5554 14.8978 15.7191 14.6282 15.8308C14.3585 15.9425 14.0695 16 13.7777 16H6.556C6.26413 16 5.97513 15.9425 5.70548 15.8308C5.43584 15.7191 5.19083 15.5554 4.98445 15.3491C4.77807 15.1427 4.61437 14.8977 4.50267 14.628C4.39098 14.3584 4.3335 14.0694 4.3335 13.7775V6.55584Z" stroke="#FAFAFA" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M1.84333 12.4475C1.58779 12.3018 1.37523 12.0912 1.22715 11.8371C1.07906 11.5829 1.00071 11.2942 1 11V2.66667C1 1.75 1.75 1 2.66667 1H11C11.625 1 11.965 1.32083 12.25 1.83333" stroke="#FAFAFA" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -119,86 +129,59 @@ export default function CommonItem({image, name, skin, quality, float, type, num
                     </div>
                 </td>
                 <td className="rare__item rare__item--bought rare__item--bought--common">
-                    <span className="rare__item-row">
-                        <span className="rare__item-bold">{`$${bought}`}</span>
-                        <span className="rare__item-text">/</span>
-                        <span className="rare__item-bold">{boughtFloat}</span>
-                        <span className="rare__item-text">/</span>
-                        <span className="rare__item-text">{`${boughtDays} d.`}</span>
-                    </span>
-                    <span className="rare__item-row">
-                        <span className="rare__item-bold">{`$${bought}`}</span>
-                        <span className="rare__item-text">/</span>
-                        <span className="rare__item-bold">{boughtFloat}</span>
-                        <span className="rare__item-text">/</span>
-                        <span className="rare__item-text">{`${boughtDays} d.`}</span>
-                    </span>
-                    <span className="rare__item-row">
-                        <span className="rare__item-bold">{`$${bought}`}</span>
-                        <span className="rare__item-text">/</span>
-                        <span className="rare__item-bold">{boughtFloat}</span>
-                        <span className="rare__item-text">/</span>
-                        <span className="rare__item-text">{`${boughtDays} d.`}</span>
-                    </span>
-                    <span className="rare__item-more rare__item-more--common">+3</span>
-                    <ul className="rare__item-list rare-list rare-list--common">
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                        <li className="rare-list__el">
-                            <span className="rare-list__el-bold">$3 821.35</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">0.071</span>
-                            <span className="rare-list__el-text">/</span>
-                            <span className="rare-list__el-text">5 d.</span>
-                        </li>
-                    </ul>
+                    {boughts.length > 3 ? (
+                        <>
+                            <span className="rare__item-row">
+                                <span className="rare__item-bold">{`$${boughts[0].price}`}</span>
+                                <span className="rare__item-text">/</span>
+                                <span className="rare__item-bold">{boughts[0].float}</span>
+                                <span className="rare__item-text">/</span>
+                                <span className="rare__item-text">{`${boughts[0].days} d.`}</span>
+                            </span>
+                            <span className="rare__item-row">
+                                <span className="rare__item-bold">{`$${boughts[1].price}`}</span>
+                                <span className="rare__item-text">/</span>
+                                <span className="rare__item-bold">{boughts[1].float}</span>
+                                <span className="rare__item-text">/</span>
+                                <span className="rare__item-text">{`${boughts[1].days} d.`}</span>
+                            </span>
+                            <span className="rare__item-row">
+                                <span className="rare__item-bold">{`$${boughts[2].price}`}</span>
+                                <span className="rare__item-text">/</span>
+                                <span className="rare__item-bold">{boughts[2].float}</span>
+                                <span className="rare__item-text">/</span>
+                                <span className="rare__item-text">{`${boughts[2].days} d.`}</span>
+                            </span>
+                            <span className="rare__item-more rare__item-more--common">{`+ ${boughts.length - 3}`}</span>
+                            <ul className="rare__item-list rare-list rare-list--common">
+                                {boughts.slice(3).map((item, index) => (
+                                    <li className="rare-list__el rare-list__el--common" key={index}>
+                                        <span className="rare-list__el-text">
+                                            <svg fill="none" height="12" viewBox="0 0 12 12" width="12">
+                                                <path d="M6.07979 5.43463C6.02979 5.42963 5.96979 5.42963 5.91479 5.43463C4.72479 5.39463 3.77979 4.41963 3.77979 3.21963C3.77979 1.99463 4.76979 0.999634 5.99979 0.999634C7.22479 0.999634 8.21979 1.99463 8.21979 3.21963C8.21479 4.41963 7.26979 5.39463 6.07979 5.43463Z" fill="#A9A5B0" />
+                                                <path d="M3.57986 7.28037C2.36986 8.09037 2.36986 9.41037 3.57986 10.2154C4.95486 11.1354 7.20986 11.1354 8.58486 10.2154C9.79486 9.40537 9.79486 8.08537 8.58486 7.28037C7.21486 6.36537 4.95986 6.36537 3.57986 7.28037Z" fill="#A9A5B0" />
+                                            </svg>
+                                            {`# ${item.account}`}
+                                        </span>
+                                        <span className="rare-list__el-text">/</span>
+                                        <span className="rare-list__el-bold">{`$${item.price}`}</span>
+                                        <span className="rare-list__el-text">/</span>
+                                        <span className="rare-list__el-text">{item.float}</span>
+                                        <span className="rare-list__el-text">/</span>
+                                        <span className="rare-list__el-text">{`${item.days} d.`}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    ) : boughts.map((item, index) => (
+                        <span className="rare__item-row" key={index}>
+                            <span className="rare__item-bold">{`$${item.price}`}</span>
+                            <span className="rare__item-text">/</span>
+                            <span className="rare__item-bold">{item.float}</span>
+                            <span className="rare__item-text">/</span>
+                            <span className="rare__item-text">{`${item.days} d.`}</span>
+                        </span>
+                    ))}
                 </td>
                 <td className="rare__item rare__item-bold rare__item--last--tm">{`$${price}`}</td>
                 <td className="rare__item rare__item--price">

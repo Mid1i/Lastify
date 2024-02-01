@@ -14,7 +14,7 @@
 
     &--item {
         cursor: pointer;
-        flex: 0 0 235px;
+        flex: 0 0 240px;
     }
 
     &--icon {
@@ -88,6 +88,10 @@
     &-dash {
         align-self: center;
         margin: 0px 5px 15px;
+
+        &--rare {
+            margin: 0px 5px;
+        }
 
         & path {
             stroke: var(--outline-secondary);
@@ -171,6 +175,7 @@
         align-items: center;
         display: flex;
         margin-bottom: 10px;
+        position: relative;
 
         &-name {
             color: var(--text-bold);
@@ -187,11 +192,16 @@
 
         &-icon:last-child {
             cursor: pointer;
-            margin-left: 8px;
 
             & path {
                 stroke: var(--text-primary);
             }
+        }
+
+        & .sales-info__top-icon:last-child {
+            position: absolute;
+            left: 80px;
+            top: 30px;
         }
     }
 
@@ -212,6 +222,11 @@
             font-weight: 500;
             margin-left: 6px;
         }
+    }
+
+    & .copy {
+        left: 180px;
+        top: 13px;
     }
 }
 
@@ -234,7 +249,7 @@
     &--common {
         overflow-y: overlay;
         max-height: 140px;
-        width: 240px;
+        width: 306px;
 
         &::-webkit-scrollbar {
             width: 25px;
@@ -260,6 +275,10 @@
         display: flex;
         margin-bottom: 8px;
 
+        &--common {
+            margin-bottom: 3px;
+        }
+
         &:last-child {
             margin-bottom: 0px;
         }
@@ -275,9 +294,21 @@
         }
 
         &-text {
+            align-items: center;
+            display: flex;
             color: var(--text-primary);
             font-weight: 500;
             margin-left: 8px;
+
+            & svg {
+                margin-right: 6px;
+                height: 12px;
+                width: 12px;
+
+                & path {
+                    fill: var(--text-primary);
+                }
+            }
         }
     }
 }
