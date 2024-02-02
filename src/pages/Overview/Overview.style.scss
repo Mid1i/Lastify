@@ -168,6 +168,7 @@
     left: 0px;
     transition: all 0.2s linear;
     width: 100%;
+    z-index: 1;
 
     &.active {
         pointer-events: auto;

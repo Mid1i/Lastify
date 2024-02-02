@@ -2,6 +2,7 @@
     background: var(--background-secondary);
     box-shadow: 5px 0px 14px 0px var(--box-shadow-primary);
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     padding: 25px 20px 40px;
     max-width: 250px;

@@ -23,12 +23,20 @@ export default function AsideMenu({activePage}) {
         }
     }, []);
 
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 1440) {
+                setOpenMenu(false);
+            }
+        });
+    });
+
 
     return (
         <aside className={classNames("nav-menu", !openMenu && "small")}>
             <div className="nav-menu__title">
                 <h1 className="nav-menu__title-name">Lastify</h1>
-                <svg className={classNames("nav-menu__title-icon", !openMenu && "rotated")} fill="none" onClick={setOpenMenu} height="28" viewBox="0 0 28 28" width="28">
+                <svg className={classNames("nav-menu__title-icon", !openMenu && "rotated")} fill="none" onClick={() => setOpenMenu(prev => !prev)} height="28" viewBox="0 0 28 28" width="28">
                     <path d="M10.5 25.6666H17.5C23.3333 25.6666 25.6666 23.3333 25.6666 17.5V10.5C25.6666 4.66665 23.3333 2.33331 17.5 2.33331H10.5C4.66665 2.33331 2.33331 4.66665 2.33331 10.5V17.5C2.33331 23.3333 4.66665 25.6666 10.5 25.6666Z" fill="#1F2231"/>
                     <path d="M15.47 18.1183L11.3633 14L15.47 9.88165" stroke="#F8F0FB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

@@ -5,8 +5,8 @@ import {Routers} from "./services";
 
 
 export default function App() {
-    const [openMenu, setOpenMenu] = useReducer(prev => !prev, true);
     const [openLang, setOpenLang] = useReducer(prev => !prev, false);
+    const [openMenu, setOpenMenu] = useState(true);
     const [theme, setTheme] = useState('dark');
 
 
