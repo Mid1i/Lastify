@@ -51,7 +51,7 @@
         max-height: 100%;
 
         &::-webkit-scrollbar {
-            width: 25px;
+            width: 0px;
 
             &-track {
                 background: var(--outline-primary);
