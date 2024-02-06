@@ -1,8 +1,26 @@
-# React + Vite
+# Lastify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Данный сайт представляет собой админ-панель, на которой пользователь может посмотреть информацию о последних сделках на сайте, об аккаунтах, статистику покупок/продаж, логи сайта, также оставить обратную связь и изменить настройки сайта.
 
-Currently, two official plugins are available:
+На сайте присутствует тёмная/светлая тема, навигация, различные модальные окна.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Стек технологий:
+- ReactJS
+- React-Router-DOM
+- SCSS
+
+## Скриншоты сайта:
+- Страница "Overview"
+<img alt="Overview" src="./src/assets/images/screenshots/1.png"/>
+
+- Страница "Sales"
+<img alt="Sales" src="./src/assets/images/screenshots/2.png"/>
+
+- Страница "Common"
+<img alt="Common" src="./src/assets/images/screenshots/3.png"/>
+
+- Страница "Accounts"
+<img alt="Accounts" src="./src/assets/images/screenshots/4.png"/>
+
+- Страница "Logs"
+<img alt="Logs" src="./src/assets/images/screenshots/5.png"/>
